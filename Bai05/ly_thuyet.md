@@ -1,0 +1,8 @@
+*   **Chuyển Section thành một file riêng:** Thành phần `section` được chuyển từ file `index.js` sang file `section.js` riêng biệt, nằm trong thư mục `components`. Điều này giúp tổ chức code tốt hơn và dễ dàng tái sử dụng thành phần này.
+*   **Chuyển Weekday Title:** Thành phần `weekday title`, vốn nằm trong `section`, cũng được chuyển vào file `section.js`. Điều này đảm bảo tính logic và liên kết của các thành phần con với thành phần cha.
+*   **Export Section:** File `section.js` xuất (export) thành phần `section` để có thể sử dụng nó trong file `index.js`. Điều này cho phép file `index.js` nhập (import) và sử dụng thành phần `section`.
+*   **Truyền Text dưới dạng Prop:** Thay vì hiển thị chữ "M" mặc định, chữ cái đại diện cho thứ trong tuần (ví dụ: "M", "T", "W") được truyền vào thành phần `section` dưới dạng prop có tên `text`. Điều này làm cho thành phần `section` linh hoạt hơn vì có thể hiển thị các chữ cái khác nhau. Trong file `section.js`, prop `text` được trích xuất và sử dụng để hiển thị nội dung của `weekday title`.
+*   **Sử dụng Styled Components:** File `section.js` nhập (import) cả React và styled components, đồng thời tạo một phiên bản styled của section, được gọi là `styled section`. Điều này giúp dễ dàng định kiểu cho section.
+*   **Tái cấu trúc và tái sử dụng:** Thành phần `section` được tái cấu trúc để có thể tái sử dụng 7 lần, mỗi lần đại diện cho một ngày trong tuần, với nội dung được truyền vào dưới dạng prop `text`.
+
+Tóm lại, bài học này tập trung vào việc tái cấu trúc code bằng cách di chuyển các component vào các file riêng, xuất và nhập các component giữa các file, cũng như truyền prop vào các component để làm cho chúng linh hoạt hơn.
